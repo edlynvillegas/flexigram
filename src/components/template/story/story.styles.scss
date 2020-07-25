@@ -1,0 +1,17 @@
+.story-template {
+    position: relative;
+    padding: 3px;
+    display: inline-block;
+    margin-right: 20px;
+    cursor: pointer;
+
+    svg.illustration {
+        display: block;
+        width: 100px;
+        height: 100px;
+    }
+
+    .tooltip {
+        position: absolute;
+    }
+}

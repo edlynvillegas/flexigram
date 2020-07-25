@@ -1,0 +1,83 @@
+@import '../../../variables';
+
+.form-group {
+    position: relative;
+    display: block;
+    margin-bottom: 20px;
+
+    label {
+        color: #dea770;
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
+
+    input {
+        position: relative;
+        display: block;
+        width: 100%;
+        border: none;
+        padding: 5px 0;
+        background-color: transparent;
+        color: #fff;
+    }
+
+    svg {
+        position: absolute;
+        right: 0;
+        bottom: 5px;
+        transition: all .3s ease;
+        cursor: pointer;
+
+        &.closed {
+            path:last-child {
+                fill-rule: evenodd;
+            }
+        }
+    }
+
+    .input-error {
+        position: absolute;
+        display: block;
+        color: $insta-pink;
+        font-size: 10px;
+        line-height: 15px;
+    }
+    
+    &::before {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: #404040;
+    }
+    
+    &::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        display: block;
+        width: 0;
+        height: 2px;
+        transform: translateX(-50%);
+        transition: all .3s ease;
+    }
+
+    &:disabled {
+        cursor: not-allowed;
+        color: #868686;
+    }
+
+    &.is-error {
+        &::before {
+            background-color: $insta-pink;
+        }
+    }
+    &.is-focus {
+        &::after {
+            width: 100%;
+            background-color: $insta-orange;
+        }
+    }
+}

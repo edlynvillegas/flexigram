@@ -1,0 +1,51 @@
+@import '../../../variables';
+
+.insta-button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    padding: 10px 13px;
+    transition: all .3s ease;
+    user-select: none;
+    cursor: pointer;
+
+    &:hover {
+        box-shadow: 0 4px 12px -4px rgba(0, 0, 0, 0.65);
+    }
+    &.rounded {
+        border-radius: 20px;
+    }
+    &.cancel {
+        background: none;
+
+        &:hover {
+            box-shadow: none;
+            background: rgba(0, 0, 0, 0.06);
+        }
+        p {
+            color: $insta-pink;
+        }
+    }
+    &.primary {
+        background: linear-gradient(-25deg, $insta-pink, $insta-orange);
+    }
+
+    svg {
+        stroke: #fff;
+        stroke-width: 1.8;
+        margin-right: 10px;
+    }
+
+    p {
+        margin: 0;
+        padding: 0;
+        color: #fff;
+        font-size: 15px;
+        display: inline-block;
+        border: none;
+    }
+}

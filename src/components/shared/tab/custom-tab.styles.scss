@@ -1,0 +1,38 @@
+@import '../../../variables';
+
+.insta-tab {
+    position: relative;
+    display: inline-block;
+    border-radius: 20px;
+    
+    button {
+        border: none;
+        font-size: 12px;
+        padding: 7px 13px;
+        background-color: rgba(255, 255, 255, 0.28);
+        color: #efd6bc;
+        transition: all .3s ease;
+        cursor: pointer;
+
+        &:first-child {
+            border-radius: 20px 0 0 20px;
+        }
+        &:last-child {
+            border-radius: 0 20px 20px 0;
+        }
+        &:hover,
+        &:focus {
+            background-color: rgba(255, 255, 255, 0.18);
+        }
+        &.active {
+            color: #fff;
+            background-image: linear-gradient(-25deg, $insta-pink, $insta-orange);
+            z-index: 1;
+            
+            &:hover,
+            &:focus {
+                box-shadow: 0px 0px 6px -2px $insta-orange;
+            }
+        }
+    }
+}

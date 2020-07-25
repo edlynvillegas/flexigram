@@ -1,0 +1,10 @@
+@import  'variables';
+
+button, input, textarea {
+  &:focus {
+    outline: none;
+  }
+  &:disabled {
+    cursor: not-allowed;
+  }
+}
